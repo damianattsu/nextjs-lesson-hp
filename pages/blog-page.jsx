@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import Post from "../components/Post";
 import { getAllPostData } from "../lib/posts";
 
-const Blog = ({ posts }) => {
+export default function Blog({ posts }) {
 	return (
 		<Layout title="Blog" content="Blogページです">
 			<ul className="m-10">
@@ -13,8 +13,7 @@ const Blog = ({ posts }) => {
 			</ul>
 		</Layout>
 	);
-};
-export default Blog;
+}
 
 export async function getStaticProps() {
 	const posts = await getAllPostData();
